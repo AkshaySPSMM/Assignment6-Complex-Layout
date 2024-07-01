@@ -1,0 +1,244 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+a
+{
+    text-decoration: none;
+    color:currentColor;
+}
+header
+{
+    height: 2rem;
+    background: linear-gradient(90deg,skyblue,white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem;
+}
+.icon
+{
+    font-size: 2rem;
+    font-weight: 600;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#iconspan
+{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:rgb(243, 8, 8);
+}
+
+.hamberger
+{
+    display: flex;
+}
+nav
+{
+    display: flex;
+    align-items: center;
+    color: #020202;
+    justify-content: center;
+    text-shadow: 0px 2px 3px rgb(114, 109, 109);
+}
+.lists
+{
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+#hamberg,label
+{
+    display: none;
+}
+section
+{
+    height: auto;
+    background-color: aquamarine;
+    display: flex;
+}
+main
+{
+    width: 70%;
+    background-color: blue;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0;
+}
+.maincard
+{
+    height: auto;
+    width: 70%;
+    overflow: hidden;
+    border-radius: 2rem;
+}
+.maincard img
+{
+    height:100%;
+    width: 100%;
+    object-fit: cover;
+}
+aside {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem 0;
+}
+
+.asidecards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    align-items: center; 
+}
+
+.asidecard {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 calc(50% - 1rem);
+    height: 30%;
+    width: 85%;
+    background-color: blueviolet;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    margin: 0.5rem;
+}
+.asideimg
+{
+    height: 60%;
+}
+
+.asidecard img
+{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.asidecontent
+{
+   text-align: center;
+   height: 40%;
+   font-size: 15px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+footer
+{
+    height: auto;
+    padding: 2rem;
+    /* background-color: grey; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footerimg {
+    height: auto;
+    display: flex;
+    gap: 1rem; 
+    justify-content: center; 
+}
+
+.footimg {
+    height: auto;
+    width: 50%; 
+}
+
+.footerimg img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    /* background-color: #fff; */
+}
+
+@media (max-width:1110px)
+{
+    .asidecontent
+    {
+        font-size: 10px;
+    }
+}
+@media (max-width:769px)
+{
+    nav
+    {
+        flex-direction: column;
+    }
+    .lists
+    {
+        margin: 0;
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        display: hidden;
+        color: black;
+    }
+    label
+    {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    #hamberg:checked ~ .menu
+    {
+        display: block;
+    }
+    .menu
+    {
+        width: 100%;
+        background-color:#fff ;
+        position: absolute;
+        top: 15%;
+        right: 0;
+        display: none;
+        box-shadow: 1px 3px 3px black;
+        z-index: 1;
+    }
+    section
+    {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    main
+    {
+        width: 100%;
+        height: 20rem;
+        padding: 0;
+    }
+    aside
+    {
+        
+        width: 60%;
+    }
+   
+    .asidecard {
+        flex: 1 1 100%; 
+    }
+   
+}
+@media (max-width:426px)
+{
+    main
+    {
+        height: 10rem;
+        padding: 0;
+    }
+    .footerimg
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+        .asidecard {
+            flex: 1 1 100%; 
+        }
+}
